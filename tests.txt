@@ -1,0 +1,35 @@
+Dell@HarshKhanpara MINGW64 ~ (master)
+$ curl -X POST http://127.0.0.1:5000/predict -H "Content-Type: application/json" -d '{
+  "Product": "Student loan",
+  "Sub-product": "Non-federal student loan",
+  "Issue": "Repaying your loan",
+  "Sub-issue": "Account opened without my consent or knowledge",
+  "Company public response": "Company believes complaint relates to a discontinued policy or procedure",
+  "Company": "Nelnet, Inc.",
+  "State": "WI",
+  "ZIP code": "53142",
+  "Consumer consent provided?": "Consent withdrawn",
+  "Submitted via": "Web",
+  "Company response to consumer": "Closed",
+  "Timely response?": "Yes"
+}'
+{"prediction":[1.0]}
+ 
+
+
+Dell@HarshKhanpara MINGW64 ~ (master)
+$ curl -X POST http://127.0.0.1:5000/predict -H "Content-Type: application/json" -d '{
+  "Product": "Credit card",
+  "Sub-product": "Credit card debt",
+  "Issue": "Account terms and changes",
+  "Sub-issue": "Account opened without my consent or knowledge",
+  "Company public response": "Company believes complaint relates to a discontinued policy or procedure",
+  "Company": "Nelnet, Inc.",
+  "State": "WI",
+  "ZIP code": "53142",
+  "Consumer consent provided?": "Consent withdrawn",
+  "Submitted via": "Web",
+  "Company response to consumer": "Closed",
+  "Timely response?": "Yes"
+}'
+{"prediction":[1.0]}
